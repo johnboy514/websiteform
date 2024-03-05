@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 .App {
   text-align: center;
+}
+
+.font {
+  font-family: 'Alice', serif;
 }
 
 .App-logo {
@@ -35,4 +40,242 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.carousel-image {
+  max-height: 300px; /* Set the maximum height as per your design */
+  width: auto; /* This allows the image to maintain its aspect ratio */
+}
+
+.backgroundcolor {
+  background-color: #fefae0;
+}
+
+@media (max-width: 990px) {
+  .requestQuoteCard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .picsCarousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutSection{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-nav {
+    margin-left: auto;
+    padding-right: 20px;
+    max-width: 100px;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.button-pop-out {
+  transition: transform 0.2s ease;
+}
+
+.button-pop-out:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {  
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {  
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideInBottom {  
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rcp-root {
+  --rcp-background-color: #121212;
+  --rcp-field-input-color: #ffffff;
+  --rcp-field-input-border-color: #242424;
+  --rcp-field-label-color: #808080;
+}
+
+.rcp {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rcp-background-color);
+  border-radius: 10px;
+}
+
+.rcp-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+}
+
+.rcp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rcp-interactive {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  touch-action: none;
+}
+
+.rcp-saturation {
+  cursor: all-scroll;
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent, black), linear-gradient(to right, white, transparent);
+  border-radius: 10px 10px 0 0;
+}
+
+.rcp-saturation-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / .15);
+  transform: translate(-10px, -10px);
+}
+
+.rcp-hue {
+  cursor: ew-resize;
+  position: relative;
+  width: 100%;
+  height: 12px;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 0, 0),
+    rgb(255, 255, 0),
+    rgb(0, 255, 0),
+    rgb(0, 255, 255),
+    rgb(0, 0, 255),
+    rgb(255, 0, 255),
+    rgb(255, 0, 0)
+  );
+  border-radius: 10px;
+}
+
+.rcp-hue-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / .15);
+  transform: translate(-10px, -4px);
+}
+
+.rcp-alpha {
+  cursor: ew-resize;
+  position: relative;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.rcp-alpha-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / .15);
+  transform: translate(-10px, -4px);
+}
+
+.rcp-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rcp-fields-floor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.rcp-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rcp-field-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: center;
+  color: var(--rcp-field-input-color);
+  background-color: transparent;
+  border: 2px solid var(--rcp-field-input-border-color);
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 0;
+}
+
+.rcp-field-label {
+  font-size: 14px;
+  text-align: center;
+  color: var(--rcp-field-label-color);
 }
