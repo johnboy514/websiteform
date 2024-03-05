@@ -3,8 +3,8 @@ import { Navbar } from 'react-bootstrap';
 
 function NavbarComponent() {
   const navbarStyle = {
-    backgroundColor: "#606c38",
-    position: 'fixed',
+    backgroundColor: "#d5d9f2",
+    position: '',
     height: '110px',
     width: '100%',
     zIndex: '1',
@@ -16,7 +16,7 @@ function NavbarComponent() {
     left: 0,
     right: 0,
     height: '20px',
-    backgroundColor: "#283618",
+    backgroundColor: "#acd0ff",
   };
 
   const whiteTextStyle = {
@@ -30,7 +30,7 @@ function NavbarComponent() {
     top: '100px', // Position the line below the Navbar
     left: 0,
     right: 0,
-    backgroundColor: "#283618",
+    backgroundColor: "#1d1bb3cc",
   };
 
   return (
@@ -38,7 +38,7 @@ function NavbarComponent() {
       <div style={lineStyle}></div>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}>WebDevBoyz</Navbar.Brand>
+          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}><img src={require('../images/logo.png')} alt="Logo" className="img-fluid float-start" style={{ marginTop: '20px', width: '300px', height: 'auto'  }} /></Navbar.Brand>
         </Container>
       </Navbar>
       <div style={lineAboveNavLinksStyle}></div>

@@ -13,12 +13,36 @@ function Footer() {
                   </p>
                 </div>
                 <div className="col-md-6 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
-                  <h6 className="text-uppercase fw-bold mb-4">Info</h6>
-                  <p><i className="fas fa-home me-3 text-secondary"></i> Marshall, NC 28753, US</p>
-                  <p>
-                    <i className="fas fa-envelope me-3 text-secondary"></i>
-                    wild.bergamot.gardening@gmail.com
-                  </p>
+
+                  <h5 className="">Developer Links</h5>
+
+                  <ul className="list-unstyled mb-0">
+
+                  <li>
+                    <span className="text-black">John I-M</span>
+                    &nbsp;
+                    <a href="https://www.linkedin.com/in/john-ifert-miller-36231126a/" className="icon-link">
+                      <i className="fab fa-linkedin-in" style={{ color: 'black' }}></i>
+                    </a>
+                    &nbsp;
+                    <a href="https://github.com/johnboy514" className="icon-link">
+                      <i className="fab fa-github" style={{ color: 'black' }}></i>
+                    </a>
+                  </li>
+
+                    <li>
+                      <span className="text-black">Robert O</span>
+                      &nbsp;
+                      <a href="https://www.linkedin.com/in/robert-obernier-700b36269/" className="icon-link">
+                        <i className="fab fa-linkedin-in" style={{ color: 'black' }}></i>
+                      </a>
+                      &nbsp;
+                      <a href="https://github.com/rjo6615" className="icon-link">
+                        <i className="fab fa-github" style={{ color: 'black' }}></i>
+                      </a>
+                    </li>
+
+                  </ul>
                 </div>      
               </div>        
             </div>
