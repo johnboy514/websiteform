@@ -38,7 +38,7 @@ function NavbarComponent() {
       <div style={lineStyle}></div>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}>wild bergamot</Navbar.Brand>
+          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}>WebDevBoyz</Navbar.Brand>
         </Container>
       </Navbar>
       <div style={lineAboveNavLinksStyle}></div>
