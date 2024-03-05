@@ -14,23 +14,72 @@ function Home() {
   const [visible1, setVisible1] = React.useState(false);
   const [visible2, setVisible2] = React.useState(false);
   const [visible3, setVisible3] = React.useState(false);
-  const name = useRef();
-  const email = useRef();
-  const message = useRef();
-  const address = useRef();
+  const [visible4, setVisible4] = React.useState(false);
+  const [visible5, setVisible5] = React.useState(false);
+  const [visible6, setVisible6] = React.useState(false);
+  const [visible7, setVisible7] = React.useState(false);
+  const [visible8, setVisible8] = React.useState(false);
+  const [visible9, setVisible9] = React.useState(false);
+  const [visible10, setVisible10] = React.useState(false);
+  const [visible11, setVisible11] = React.useState(false);
+  const [visible12, setVisible12] = React.useState(false);
+  const [visible13, setVisible13] = React.useState(false);
+  const [visible14, setVisible14] = React.useState(false);
+  const [visible15, setVisible15] = React.useState(false);
+  const [visible16, setVisible16] = React.useState(false);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const organizationRef = useRef(null);
+  const briefRef = useRef(null);
+  const goalRef = useRef(null);
+  const styleRef = useRef(null);
+  const colorRef = useRef(null);
+  const brandRef = useRef(null);
+  const visionRef = useRef(null);
+  const featsRef = useRef(null);
+  const similarRef = useRef(null);
+  const contentRef = useRef(null);
+  const imagesRef = useRef(null);
+  const linksRef = useRef(null);
+  const shareRef = useRef(null);
+  const gramRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.current.value === '') {
-      setVisible(true);
-    } if (email.current.value === '') {
-      setVisible2(true);
-    } if (message.current.value === '') {
-      setVisible1(true);
-    } if (address.current.value === '') {
-      setVisible3(true);
-    } else {
-      sendMail();
+  if (nameRef.current.value === '') {
+    setVisible(true);
+  } if (emailRef.current.value === '') {
+    setVisible1(true);
+  } if (organizationRef.current.value === '') {
+    setVisible2(true);
+  } if (briefRef.current.value === '') {
+    setVisible3(true);
+  } if (goalRef.current.value === '') {
+    setVisible4(true);
+  } if (styleRef.current.value === '') {
+    setVisible5(true);
+  } if (colorRef.current.value === '') {
+    setVisible6(true);
+  } if (brandRef.current.value === '') {
+    setVisible7(true);
+  } if (visionRef.current.value === '') {
+    setVisible8(true);
+  } if (featsRef.current.value === '') {
+    setVisible9(true);
+  } if (similarRef.current.value === '') {
+    setVisible10(true);
+  } if (contentRef.current.value === '') {
+    setVisible11(true);
+  } if (imagesRef.current.value === '') {
+    setVisible12(true);
+  } if (linksRef.current.value === '') {
+    setVisible13(true);
+  } if (shareRef.current.value === '') {
+    setVisible14(true);
+  } if (gramRef.current.value === '') {
+    setVisible15(true);
+  } else {
+    sendMail();
     }
   };
 
@@ -39,13 +88,13 @@ function Home() {
   })();
 
   function sendMail() {
-    if (name.current.value && email.current.value && email.current.value) {
+    if (nameRef.current.value && emailRef.current.value && emailRef.current.value) {
       var params = {
-        from_name: name.current.value,
-        from_email: email.current.value,
-        reply_to: email.current.value,
-        message: message.current.value,
-        address: address.current.value,
+        from_name: nameRef.current.value,
+        from_email: emailRef.current.value,
+        reply_to: emailRef.current.value,
+        organization: organizationRef.current.value,
+        brief: briefRef.current.value,
       };
       emailjs.send('service_wo1ekqg', 'template_jff3baf', params).then(function (res) {});
       alert("Thank you for sending a message!");
@@ -113,108 +162,131 @@ function Home() {
                   <div className="card-body py-5 px-md-">
                   <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Contact Information:</h4>
                     <Form onSubmit={handleSubmit} className="px-3">
-                      <Form.Group className="mb-3 pt-3" controlId="formName">
-                        <Form.Control type="text" ref={name} placeholder="Name" />
-                        {visible && <div className="text-danger">Please enter your name</div>}
-                      </Form.Group>
+                    <Form.Group className="mb-3 pt-3" controlId="formName">
+                      <Form.Control type="text" ref={nameRef} placeholder="Name" />
+                      {visible && <div className="text-danger">Please enter your name</div>}
+                    </Form.Group>
 
-                      <Form.Group className="mb-3" controlId="formEmail">
-                        <Form.Control type="email" ref={email} placeholder={"Email"} pattern="^\S+@\S+\.(com|net|edu|org|gov)$" title="Please enter a valid email address ending with .com" />
-                        {visible2 && <div className="text-danger">Please enter your Email</div>}
-                      </Form.Group>
+                    <Form.Group className="mb-3" controlId="formEmail">
+                      <Form.Control type="email" ref={emailRef} placeholder="Email" />
+                      {visible2 && <div className="text-danger">Please enter your Email</div>}
+                    </Form.Group>
 
-                      <Form.Group className="mb-3" controlId="formOrg">
-                        <Form.Control type="textarea" ref={message} placeholder={"Company/Organization Name (if applicable)"}  title="Company/Organization Name (if applicable)" />
-                        {visible2 && <div className="text-danger">Please enter your Company/Organization</div>}
-                      </Form.Group>
+                    <Form.Group className="mb-3" controlId="formOrg">
+                      <Form.Control type="textarea" ref={organizationRef} placeholder="Company/Organization Name (if applicable)" />
+                      {visible3 && <div className="text-danger">Please enter your Company/Organization</div>}
+                    </Form.Group>
 
                     <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Project Overview:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Briefly describe your company/organization and its purpose:</h5>
-                      <Form.Group className="mb-3" controlId="formBrief">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Briefly describe your company/organization and its purpose:"/>
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
-                      </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBrief">
+                      <Form.Control as="textarea" ref={briefRef} rows={3} placeholder="Briefly describe your company/organization and its purpose:" />
+                      {visible1 && <div className="text-danger">Please enter your message</div>}
+                    </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):</h5>
-                      <Form.Group className="mb-3" controlId="formGoal">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):"/>
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
-                      </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGoal">
+                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                        What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):
+                      </h5>
+                      <Form.Control as="textarea" ref={goalRef} rows={3} placeholder="What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):" />
+                      {visible1 && <div className="text-danger">Please enter your message</div>}
+                    </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Design Preferences:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Describe the overall style or theme you envision for your website:</h5>
                       <Form.Group className="mb-3" controlId="formStyle">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Describe the overall style or theme you envision for your website"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Describe the overall style or theme you envision for your website:
+                        </h5>
+                        <Form.Control as="textarea" ref={styleRef} rows={3} placeholder="Describe the overall style or theme you envision for your website" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Are there any specific color schemes:</h5>
                       <Form.Group className="mb-3" controlId="formColor">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Are there any specific color schemes"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Are there any specific color schemes:
+                        </h5>
+                        <Form.Control as="textarea" ref={colorRef} rows={3} placeholder="Are there any specific color schemes" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Branding guidelines to adhere to:</h5>
                       <Form.Group className="mb-3" controlId="formBrand">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Branding guidelines to adhere to"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Branding guidelines to adhere to:
+                        </h5>
+                        <Form.Control as="textarea" ref={brandRef} rows={3} placeholder="Branding guidelines to adhere to" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Functionality and Features:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact):</h5>
                       <Form.Group className="mb-3" controlId="formVision">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact)"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact):
+                        </h5>
+                        <Form.Control as="textarea" ref={visionRef} rows={3} placeholder="List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact)" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog):</h5>
                       <Form.Group className="mb-3" controlId="formFeats">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog)"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog):
+                        </h5>
+                        <Form.Control as="textarea" ref={featsRef} rows={3} placeholder="Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog)" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Competitor Analysis:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?</h5>
                       <Form.Group className="mb-3" controlId="formSimilar">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?
+                        </h5>
+                        <Form.Control as="textarea" ref={similarRef} rows={3} placeholder="Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Content:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Do you already have written content for the website, or do you need assistance with content creation?</h5>
                       <Form.Group className="mb-3" controlId="formContent">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Do you already have written content for the website, or do you need assistance with content creation?"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Do you already have written content for the website, or do you need assistance with content creation?
+                        </h5>
+                        <Form.Control as="textarea" ref={contentRef} rows={3} placeholder="Do you already have written content for the website, or do you need assistance with content creation?" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Are there any specific images or multimedia elements you want to include?</h5>
                       <Form.Group className="mb-3" controlId="formImages">
-                      <Form.Control as="textarea" ref={message} placeholder="Yes/No"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Are there any specific images or multimedia elements you want to include?
+                        </h5>
+                        <Form.Control as="textarea" ref={imagesRef} rows={3} placeholder="Yes/No" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Additional Information:</h4>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Are there any specific websites you admire in terms of design or functionality?</h5>
                       <Form.Group className="mb-3" controlId="formLinks">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Please link the sites you like and reasons why!"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Are there any specific websites you admire in terms of design or functionality?
+                        </h5>
+                        <Form.Control as="textarea" ref={linksRef} rows={3} placeholder="Please link the sites you like and reasons why!" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>Is there anything else you would like to share or discuss regarding your website project?</h5>
                       <Form.Group className="mb-3" controlId="formShare">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="Is there anything else you would like to share or discuss regarding your website project?"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          Is there anything else you would like to share or discuss regarding your website project?
+                        </h5>
+                        <Form.Control as="textarea" ref={shareRef} rows={3} placeholder="Is there anything else you would like to share or discuss regarding your website project?" />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>If you have an instagram or any social media you feel would help be get an idea of what you like aesthetically link it</h5>
                       <Form.Group className="mb-3" controlId="formGram">
-                      <Form.Control as="textarea" ref={message} rows={3} placeholder="If you have an instagram or any social media you feel would help be get an idea of what you like aesthetically link it"/>
+                        <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                          If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it.
+                        </h5>
+                        <Form.Control as="textarea" ref={gramRef} rows={3} placeholder="If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it." />
                         {visible1 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
