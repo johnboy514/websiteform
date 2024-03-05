@@ -10,23 +10,23 @@ import designPic from "../images/designpic.jpg";
 
 function Home() {
 
-  const [visible, setVisible] = React.useState(false);
-  const [visible1, setVisible1] = React.useState(false);
-  const [visible2, setVisible2] = React.useState(false);
-  const [visible3, setVisible3] = React.useState(false);
-  const [visible4, setVisible4] = React.useState(false);
-  const [visible5, setVisible5] = React.useState(false);
-  const [visible6, setVisible6] = React.useState(false);
-  const [visible7, setVisible7] = React.useState(false);
-  const [visible8, setVisible8] = React.useState(false);
-  const [visible9, setVisible9] = React.useState(false);
-  const [visible10, setVisible10] = React.useState(false);
-  const [visible11, setVisible11] = React.useState(false);
-  const [visible12, setVisible12] = React.useState(false);
-  const [visible13, setVisible13] = React.useState(false);
-  const [visible14, setVisible14] = React.useState(false);
-  const [visible15, setVisible15] = React.useState(false);
-  const [visible16, setVisible16] = React.useState(false);
+  const [visible, setVisible] = useState(false);
+  const [visible1, setVisible1] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
+  const [visible4, setVisible4] = useState(false);
+  const [visible5, setVisible5] = useState(false);
+  const [visible6, setVisible6] = useState(false);
+  const [visible7, setVisible7] = useState(false);
+  const [visible8, setVisible8] = useState(false);
+  const [visible9, setVisible9] = useState(false);
+  const [visible10, setVisible10] = useState(false);
+  const [visible11, setVisible11] = useState(false);
+  const [visible12, setVisible12] = useState(false);
+  const [visible13, setVisible13] = useState(false);
+  const [visible14, setVisible14] = useState(false);
+  const [visible15, setVisible15] = useState(false);
+  
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const organizationRef = useRef(null);
@@ -88,7 +88,7 @@ function Home() {
   })();
 
   function sendMail() {
-    if (nameRef.current.value && emailRef.current.value && emailRef.current.value) {
+    if (nameRef.current.value && emailRef.current.value) {
       var params = {
         from_name: nameRef.current.value,
         from_email: emailRef.current.value,
@@ -181,19 +181,19 @@ function Home() {
 
                     <Form.Group className="mb-3" controlId="formEmail">
                       <Form.Control type="email" ref={emailRef} placeholder="Email" />
-                      {visible2 && <div className="text-danger">Please enter your Email</div>}
+                      {visible1 && <div className="text-danger">Please enter your Email</div>}
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formOrg">
                       <Form.Control type="textarea" ref={organizationRef} placeholder="Company/Organization Name (if applicable)" />
-                      {visible3 && <div className="text-danger">Please enter your Company/Organization</div>}
+                      {visible2 && <div className="text-danger">Please enter your Company/Organization</div>}
                     </Form.Group>
 
                     <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Project Overview:</h4>
 
                     <Form.Group className="mb-3" controlId="formBrief">
                       <Form.Control as="textarea" ref={briefRef} rows={3} placeholder="Briefly describe your company/organization and its purpose:" />
-                      {visible1 && <div className="text-danger">Please enter your message</div>}
+                      {visible3 && <div className="text-danger">Please enter your message</div>}
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formGoal">
@@ -201,7 +201,7 @@ function Home() {
                         What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):
                       </h5>
                       <Form.Control as="textarea" ref={goalRef} rows={3} placeholder="What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):" />
-                      {visible1 && <div className="text-danger">Please enter your message</div>}
+                      {visible4 && <div className="text-danger">Please enter your message</div>}
                     </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Design Preferences:</h4>
@@ -211,7 +211,7 @@ function Home() {
                           Describe the overall style or theme you envision for your website:
                         </h5>
                         <Form.Control as="textarea" ref={styleRef} rows={3} placeholder="Describe the overall style or theme you envision for your website" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible5 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formColor">
@@ -219,7 +219,7 @@ function Home() {
                           Are there any specific color schemes:
                         </h5>
                         <Form.Control as="textarea" ref={colorRef} rows={3} placeholder="Are there any specific color schemes" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible6 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formBrand">
@@ -227,7 +227,7 @@ function Home() {
                           Branding guidelines to adhere to:
                         </h5>
                         <Form.Control as="textarea" ref={brandRef} rows={3} placeholder="Branding guidelines to adhere to" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible7 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Functionality and Features:</h4>
@@ -237,7 +237,7 @@ function Home() {
                           List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact):
                         </h5>
                         <Form.Control as="textarea" ref={visionRef} rows={3} placeholder="List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact)" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible8 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formFeats">
@@ -245,7 +245,7 @@ function Home() {
                           Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog):
                         </h5>
                         <Form.Control as="textarea" ref={featsRef} rows={3} placeholder="Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog)" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible9 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Competitor Analysis:</h4>
@@ -255,7 +255,7 @@ function Home() {
                           Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?
                         </h5>
                         <Form.Control as="textarea" ref={similarRef} rows={3} placeholder="Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible10 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Content:</h4>
@@ -265,7 +265,7 @@ function Home() {
                           Do you already have written content for the website, or do you need assistance with content creation?
                         </h5>
                         <Form.Control as="textarea" ref={contentRef} rows={3} placeholder="Do you already have written content for the website, or do you need assistance with content creation?" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible11 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formImages">
@@ -273,7 +273,7 @@ function Home() {
                           Are there any specific images or multimedia elements you want to include?
                         </h5>
                         <Form.Control as="textarea" ref={imagesRef} rows={3} placeholder="Yes/No" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible12 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Additional Information:</h4>
@@ -283,7 +283,7 @@ function Home() {
                           Are there any specific websites you admire in terms of design or functionality?
                         </h5>
                         <Form.Control as="textarea" ref={linksRef} rows={3} placeholder="Please link the sites you like and reasons why!" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible13 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formShare">
@@ -291,7 +291,7 @@ function Home() {
                           Is there anything else you would like to share or discuss regarding your website project?
                         </h5>
                         <Form.Control as="textarea" ref={shareRef} rows={3} placeholder="Is there anything else you would like to share or discuss regarding your website project?" />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible14 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formGram">
@@ -299,7 +299,7 @@ function Home() {
                           If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it.
                         </h5>
                         <Form.Control as="textarea" ref={gramRef} rows={3} placeholder="If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it." />
-                        {visible1 && <div className="text-danger">Please enter your message</div>}
+                        {visible15 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <div style={{ borderBottom: '2px solid #acd0ff' }}></div>
