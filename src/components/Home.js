@@ -95,8 +95,20 @@ function Home() {
         reply_to: emailRef.current.value,
         organization: organizationRef.current.value,
         brief: briefRef.current.value,
+        goal: goalRef.current.value,
+        style: styleRef.current.value,
+        color: colorRef.current.value,
+        brand: brandRef.current.value,
+        vision: visionRef.current.value,
+        feats: featsRef.current.value,
+        similar: similarRef.current.value,
+        content: contentRef.current.value,
+        images: imagesRef.current.value,
+        links: linksRef.current.value,
+        share: shareRef.current.value,
+        gram: gramRef.current.value,
       };
-      emailjs.send('service_wo1ekqg', 'template_jff3baf', params).then(function (res) {});
+      emailjs.send('service_wo1ekqg', 'template_s1uyiz6', params).then(function (res) {});
       alert("Thank you for sending a message!");
       window.location.reload(false);
     } else {
