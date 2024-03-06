@@ -12,8 +12,8 @@ function App() {
     <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="/websiteform" element={<Home />} />
+          <Route path="*" element={<Navigate to="/websiteform"/>} />
         </Routes>
         <Footer />
     </Router>
