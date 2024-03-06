@@ -26,6 +26,7 @@ function Home() {
   const [visible13, setVisible13] = useState(false);
   const [visible14, setVisible14] = useState(false);
   const [visible15, setVisible15] = useState(false);
+  const [visible16, setVisible16] = useState(false);
   
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -43,6 +44,12 @@ function Home() {
   const linksRef = useRef(null);
   const shareRef = useRef(null);
   const gramRef = useRef(null);
+  const colorPick1Ref = useRef(null);
+  const colorPick2Ref = useRef(null);
+  const colorPick3Ref = useRef(null);
+  const colorPick4Ref = useRef(null);
+  const colorPick5Ref = useRef(null);
+  const colorPick6Ref = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -78,6 +85,8 @@ function Home() {
     setVisible14(true);
   } if (gramRef.current.value === '') {
     setVisible15(true);
+  } if (colorPick1Ref.current.value === '') {
+    setVisible16(true);
   } else {
     sendMail();
     }
@@ -107,6 +116,12 @@ function Home() {
         links: linksRef.current.value,
         share: shareRef.current.value,
         gram: gramRef.current.value,
+        color_pick1: colorPick1Ref.current.value,
+        color_pick2: colorPick2Ref.current.value,
+        color_pick3: colorPick3Ref.current.value,
+        color_pick4: colorPick4Ref.current.value,
+        color_pick5: colorPick5Ref.current.value,
+        color_pick6: colorPick6Ref.current.value,
       };
       emailjs.send('service_wo1ekqg', 'template_s1uyiz6', params).then(function (res) {});
       alert("Thank you for sending a message!");
@@ -220,6 +235,21 @@ function Home() {
                         </h5>
                         <Form.Control as="textarea" ref={colorRef} rows={3} placeholder="Are there any specific color schemes" />
                         {visible6 && <div className="text-danger">Please enter your message</div>}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formColor">
+                        <h5 className="text-center" style={{ color: "#000000cc", fontFamily: "Dancing Script" }}>
+                          Choose your color palette
+                        </h5>
+                        <div style={{ display: "flex", justifyContent: "center" }}>
+                          <Form.Control type="color" ref={colorPick1Ref} style={{ marginRight: "5px" }} />
+                          <Form.Control type="color" ref={colorPick2Ref} style={{ marginRight: "5px" }} />
+                          <Form.Control type="color" ref={colorPick3Ref} style={{ marginRight: "5px" }} />
+                          <Form.Control type="color" ref={colorPick4Ref} style={{ marginRight: "5px" }} />
+                          <Form.Control type="color" ref={colorPick5Ref} style={{ marginRight: "5px" }} />
+                          <Form.Control type="color" ref={colorPick6Ref} />
+                        </div>
+                        {visible16 && <div className="text-danger">Please enter your color</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formBrand">
