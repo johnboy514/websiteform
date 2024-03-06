@@ -207,15 +207,18 @@ function Home() {
                     <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Project Overview:</h4>
 
                     <Form.Group className="mb-3" controlId="formBrief">
-                      <Form.Control as="textarea" ref={briefRef} rows={3} placeholder="Briefly describe your company/organization and its purpose:" />
+                      <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
+                      Briefly describe your company/organization and its purpose:
+                      </h5>
+                      <Form.Control as="textarea" ref={briefRef} rows={3} placeholder="Give a brief description of your buisness or organization so we can get a better idea of what you may want!" />
                       {visible3 && <div className="text-danger">Please enter your message</div>}
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formGoal">
                       <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
-                        What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):
+                        What is the primary goal of your website?:
                       </h5>
-                      <Form.Control as="textarea" ref={goalRef} rows={3} placeholder="What is the primary goal of your website? (e.g., showcase products/services, generate leads, provide information):" />
+                      <Form.Control as="textarea" ref={goalRef} rows={3} placeholder="e.g., showcase products/services, generate leads, provide information" />
                       {visible4 && <div className="text-danger">Please enter your message</div>}
                     </Form.Group>
 
@@ -225,7 +228,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Describe the overall style or theme you envision for your website:
                         </h5>
-                        <Form.Control as="textarea" ref={styleRef} rows={3} placeholder="Describe the overall style or theme you envision for your website" />
+                        <Form.Control as="textarea" ref={styleRef} rows={3} placeholder="What is the general mood or vibe of the site your going for?" />
                         {visible5 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -233,7 +236,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Are there any specific color schemes:
                         </h5>
-                        <Form.Control as="textarea" ref={colorRef} rows={3} placeholder="Are there any specific color schemes" />
+                        <Form.Control as="textarea" ref={colorRef} rows={3} placeholder="Use the color palettes below to chose the colors and also let us know if you have a scheme in mind as well for the colors." />
                         {visible6 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -256,7 +259,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Branding guidelines to adhere to:
                         </h5>
-                        <Form.Control as="textarea" ref={brandRef} rows={3} placeholder="Branding guidelines to adhere to" />
+                        <Form.Control as="textarea" ref={brandRef} rows={3} placeholder="Are there any brand requirements for the site?" />
                         {visible7 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -264,17 +267,17 @@ function Home() {
 
                       <Form.Group className="mb-3" controlId="formVision">
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
-                          List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact):
+                          List the main pages or sections you envision for your website:
                         </h5>
-                        <Form.Control as="textarea" ref={visionRef} rows={3} placeholder="List the main pages or sections you envision for your website (e.g., Home, About Us, Services, Contact)" />
+                        <Form.Control as="textarea" ref={visionRef} rows={3} placeholder="e.g., Home, About Us, Services, Contact, Gallery" />
                         {visible8 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formFeats">
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
-                          Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog):
+                          Are there any specific features or functionalities you would like to include?:
                         </h5>
-                        <Form.Control as="textarea" ref={featsRef} rows={3} placeholder="Are there any specific features or functionalities you would like to include? (e.g., contact form, e-commerce, blog)" />
+                        <Form.Control as="textarea" ref={featsRef} rows={3} placeholder="e.g., contact form, e-commerce, blog" />
                         {visible9 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -284,7 +287,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?
                         </h5>
-                        <Form.Control as="textarea" ref={similarRef} rows={3} placeholder="Provide links to websites of your competitors or similar businesses. What do you like/dislike about their websites?" />
+                        <Form.Control as="textarea" ref={similarRef} rows={3} placeholder="This step is extremely helpful for streamlining your sites build time!" />
                         {visible10 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -294,7 +297,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Do you already have written content for the website, or do you need assistance with content creation?
                         </h5>
-                        <Form.Control as="textarea" ref={contentRef} rows={3} placeholder="Do you already have written content for the website, or do you need assistance with content creation?" />
+                        <Form.Control as="textarea" ref={contentRef} rows={3} placeholder="If you have content you can either link it through a google drive to us or we will get in contact via email for the info." />
                         {visible11 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -302,7 +305,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Are there any specific images or multimedia elements you want to include?
                         </h5>
-                        <Form.Control as="textarea" ref={imagesRef} rows={3} placeholder="Yes/No" />
+                        <Form.Control as="textarea" ref={imagesRef} rows={3} placeholder="Please link us to your google drive with the media you would like to use or we can get in contact if anyother method is needed." />
                         {visible12 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -320,7 +323,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           Is there anything else you would like to share or discuss regarding your website project?
                         </h5>
-                        <Form.Control as="textarea" ref={shareRef} rows={3} placeholder="Is there anything else you would like to share or discuss regarding your website project?" />
+                        <Form.Control as="textarea" ref={shareRef} rows={3} placeholder="Your ideas go a long way in helping us shape your site so any input or info is always appreciated!" />
                         {visible14 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
@@ -328,7 +331,7 @@ function Home() {
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
                           If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it.
                         </h5>
-                        <Form.Control as="textarea" ref={gramRef} rows={3} placeholder="If you have an Instagram or any social media you feel would help be get an idea of what you like aesthetically, link it." />
+                        <Form.Control as="textarea" ref={gramRef} rows={3} placeholder="If you don't feel like linking a social dont worry just type N/a here!" />
                         {visible15 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
