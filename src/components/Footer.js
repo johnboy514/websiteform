@@ -1,9 +1,9 @@
 function Footer() {
     return (       
-        <footer className="text-center text-lg-start bg-white text-muted">  
+        <footer className="text-center text-lg-start text-muted" style={{ backgroundColor: 'rgba(213, 217, 242, 1)' }}>  
           <section className="font">
-            <div className="container text-center text-md-start mt-5">          
-              <div className="row mt-3">             
+            <div className="container text-center text-md-start">          
+              <div className="row">             
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">              
                   <h6 className="fw-bold mb-4">
                     <i className="fas fa-star me-3 text-secondary"></i>WebDevBoyz
