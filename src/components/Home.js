@@ -291,7 +291,7 @@ function Home() {
                         {visible10 && <div className="text-danger">Please enter your message</div>}
                       </Form.Group>
 
-                      <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Content:</h4>
+                      {/* <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Content:</h4>
 
                       <Form.Group className="mb-3" controlId="formContent">
                         <h5 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script"}}>
@@ -307,7 +307,7 @@ function Home() {
                         </h5>
                         <Form.Control as="textarea" ref={imagesRef} rows={3} placeholder="Type Yes or No for this section if yes we will get in contect to get that info!" />
                         {visible12 && <div className="text-danger">Please enter your message</div>}
-                      </Form.Group>
+                      </Form.Group> */}
 
                       <h4 className="text-center" style={{color: "#000000cc", fontFamily: "Dancing Script, cursive"}}>Additional Information:</h4>
 
