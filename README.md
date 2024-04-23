@@ -15,9 +15,9 @@ In this project we used the following to build the site
  - HTML5
  - Regex
 
-## Acess
+## Access
 
-The landing page can be accessed following this link
+The page can be accessed following this link
 
 https://johnboy514.github.io/websiteform/
 
