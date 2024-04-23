@@ -38,7 +38,7 @@ function NavbarComponent() {
       <div style={lineStyle}></div>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}><img src={require('../images/logo.png')} alt="Logo" className="img-fluid float-start" style={{ marginTop: '20px', width: '300px', height: 'auto'  }} /></Navbar.Brand>
+          <Navbar.Brand className="font" style={{ ...whiteTextStyle, fontSize: '40px' }}><img src={require('../images/logo.png')} alt="Logo" className="img-fluid float-start" style={{ marginTop: '', width: '300px', height: 'auto'  }} /></Navbar.Brand>
         </Container>
       </Navbar>
       <div style={lineAboveNavLinksStyle}></div>

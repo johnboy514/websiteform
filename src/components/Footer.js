@@ -6,7 +6,7 @@ function Footer() {
               <div className="row">             
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">              
                   <h6 className="fw-bold mb-4">
-                    <i className="fas fa-star me-3 text-secondary"></i>WebDevBoyz
+                    <i className="fas fa-star me-3 text-secondary"></i>WDB
                   </h6>
                   <p>
                   Thank you for taking your time to fill out the form and we will be back to you shortly!
